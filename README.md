@@ -1,3 +1,3 @@
-# Movie-Ticket-Rekonsys-Project-
+# Movie-Ticket-Reckonsys-Project-
 
 A console based application having different user access and different functionality for admin as well as other users.
