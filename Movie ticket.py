@@ -145,7 +145,7 @@ loginuser = input("Enter Username: ")
 loginpass = input("Enter Password: ")
 if login(loginuser,loginpass)=="admin":
     while x != 0:
-        print('1: for Show the seats \n2: for Buy a Ticket \n3: for Statistics ',
+        print('1: Show the seats \n2: Buy a Ticket \n3: Statistics ',
             '\n4: for Show booked Tickets User Info \n0: for Exit')
         x = int(input('Select Option - '))
 
@@ -175,7 +175,7 @@ if login(loginuser,loginpass)=="admin":
             print()
 elif login(loginuser,loginpass)=="user":
      while x != 0:
-        print('1: for Show the seats \n2: for Buy a Ticket \n0: for Exit')
+        print('1: Show the seats \n2: Buy a Ticket \n0: Exit')
         x = int(input('Select Option - '))
 
         
