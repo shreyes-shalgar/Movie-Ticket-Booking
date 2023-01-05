@@ -5,17 +5,17 @@ Seats = 6 # int(input('Enter number of seats in a Row - \n'))
 Total_Income = 0
 prize_of_ticket = 0
 Total_seat = Row*Seats
-users =["user1"]
-passwords = ["pass1"]
-ausers =["shreyes","1"]
-apasswords = ["pa$$word","1"]
-movie_db ={"mid":[1],"mname":["avatar 2"], "tid":["1"], "show_timing": ["10am"]}
+movie_db ={"mid":[1,2,3],"mname":["Avatar 2","Inception", "Avengers"], "tid":[1,1,1], "show_timing": ["10am","12pm","9am"]}
 theatre_db ={"tid":[1],"tname":["ESquare"],"city":["Solapur"]}
 tmid=-10     #arbitrary
 x = 10      #arbitrary
 Booked_ticket_Person = [[[None for j in range(Seats)] for i in range(Row)]for k in range(len(movie_db['mid']))]
 Booked_seat = [0 for i in range(len(movie_db['mid']))]
 
+users =["user1"]
+passwords = ["pass1"]
+ausers =["shreyes","1"]
+apasswords = ["pa$$word","1"]
 def login(username,password):
     if username in users and passwords[users.index(username)]==password:
         print("Logged in\n")
@@ -24,7 +24,7 @@ def login(username,password):
         print("Logged in as admin\n")
         return "admin"
     else:
-        flag=input("would you link to signup(y/n)")
+        flag=input("Would you like to Sign-up (y/n)")
         if flag=="y":
             signup(username, password)
             # print("Logged in\n")
@@ -103,6 +103,7 @@ def buy_ticket(table_of_chart,arr):
                 arr[1] += prize_of_ticket
                 print('\nBooked Successfully\n')
                 Booked_ticket_Person[tmid][Row_number-1][Column_number-1] = person_detail
+                
                 return arr
             else:
                 print('Skipped booking')
@@ -127,6 +128,7 @@ def display_seat_details(mdb,toc):
             print('Phone number - ', person['Phone_No'])
             print('Ticket Prize - ', '$', person['Ticket_prize'])
             print()
+
         else:
             print('\n---**---  Vacant seat  ---**---\n')
     else:
